@@ -1,0 +1,47 @@
+<div class="page-content">
+    <div class="header-content">
+        <div class="header-image">
+            <img class="signin-image" alt="design" src="assets/SignIn.png"/>
+            <img class="signin-quote" alt="quote" src="assets/Quotes.png"/>
+            <img class="sigin-image-mobile1" src="assets/Mobile-Log1.png" alt="kanini-Log"/>
+            <img class="sigin-image-mobile2" src="assets/Mobile-Log2.png" alt="kanini-Log"/>
+        </div>
+        <div class="header-message">
+            <label class="welcome-message" i18n>{{message}} <br>{{searchMessage}}</label>
+            <label class="kanini-message" i18n>{{kaniniMessage}}</label>
+        </div>
+    </div>
+    <div class="signin-container">
+        <div class="signin-content">
+            <div class="header">
+                <img class="img-welcome" i18n-alt src="assets/Kanini-Logo.png" alt="Kanini-Logo"/>
+            </div>
+            <div class="header-content-2">
+                <label class="signinLabel">{{signinLabel}}</label>
+                <label class="signinHeader">{{signinHeader}}</label>
+                <label class="signinHeader-mobile" i18n>Welcome back! Please enter the details</label>
+            </div>
+            <div class="form-content" [formGroup]="signinForm">
+                <div class="mb-3 labelName">
+                </div>
+                <div class="label-align-left">
+                    <label for="emailId" class="form-label emailId">{{emailId}}</label>
+                </div>
+                <div class="input-group">
+                    <input type="email" class="form-control form-signin no-border-right" id="emailId" formControlName="emailIdText"
+                        tabindex="1" autofocus required>
+                </div>
+
+                <div class="label-align-left">
+                    <label for="password" class="form-label password"><br>{{password}}</label>
+                </div>
+                <div class="input-group">
+                    <input type="password" class="form-control form-signin no-border-right" id="password" [(ngModel)]="inputText" 
+                        formControlName="passwordText" tabindex="2" autofocus required>
+                </div>
+                <br><br>
+                <button type="submit" class="btn btn-primary button-signin" [disabled]="!signinForm.valid" (click)="onSignIn()">SIGN IN</button>  
+            </div>
+        </div>
+    </div>
+</div>

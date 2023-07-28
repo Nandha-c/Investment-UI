@@ -1,0 +1,78 @@
+   
+   
+   .kanini-image {
+        width: 192px;
+        height: 63.379px;
+        text-decoration: none;
+    }
+    
+    @media (min-width: 500px){
+        .lock {
+            width: 20px;
+            align-items: start;
+        }
+        .button-logout {
+            border-radius: 50px;
+            border: 1px solid #0078FF;
+            display: flex;
+            padding: 2px 9px;
+            background-color: white;
+            color: #0078FF;
+        }
+        
+        .logout {
+            color: #0078FF;
+            font-family: Inter;
+            font-size: 16px;
+            font-weight: 500;
+        }
+        
+        .Logout-Icon{
+            width: 0%;
+        }
+        
+        .gap-start {
+            margin-right: 80px;
+        }
+        
+        .gap-end {
+            margin-left: 130px;
+        }
+    }
+
+    @media (max-width: 500px) {
+        .kanini-image {
+            width: 106px;
+            height: 38px;
+            left: 29px;
+            top: 9px;
+        }
+
+        .lock {
+            width: 0px;
+        }
+        .button-logout {
+            padding: 2px 9px;
+        }
+        
+        .logout-text {
+            font-size: 0px;
+        }
+      
+        .gap-start {
+          margin-right: 40px;
+        }
+      
+        .gap-end {
+            margin-left: 60px;
+            margin-top: 5%;
+        }
+        .Logout-Icon{
+            width: 18%;
+            transform: scaleX(-1);
+        }
+      }
+      
+      
+
+    

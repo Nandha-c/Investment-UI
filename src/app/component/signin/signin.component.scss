@@ -1,0 +1,201 @@
+$white: white;
+
+.header-content {
+  .welcome-message {
+    margin-top: 44vh;
+    position: absolute;
+    margin-left: 5%;
+    color: var(--textcolortext-900, #0C1116);
+    font-family: Manrope;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    letter-spacing: 0.96px;
+    pointer-events: none;
+  }
+
+  .kanini-message {
+    position: absolute;
+    margin-top: 59vh;
+    margin-left: 5%;
+    color: var(--textcolortext-600, #4F5B67);
+    font-family: Manrope;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 38px;
+    letter-spacing: 0.64px;
+    pointer-events: none;
+  }
+
+  .signin-image {
+    position: absolute;
+    width: 832px;
+    height: 755px;
+  }
+
+  .sigin-image-mobile1 {
+    height: 0px;
+  }
+
+  .sigin-image-mobile2 {
+    height: 0px;
+  }
+
+  .signin-quote {
+    position: absolute;
+    width: 74px;
+    height: 49px;
+    margin-top: 35vh;
+    margin-left: 5%;
+    pointer-events: none;
+  }
+}
+
+.signin-container {
+  .img-welcome {
+    position: absolute;
+    margin-top: 10%;
+    margin-left: 72%;
+    width: 210px;
+    height: 63px;
+  }
+
+  .button-signin {
+    width: 372px;
+    height: 40px;
+    border-radius: 50px;
+    background: #0078FF;
+  }
+
+  .signinLabel {
+    position: absolute;
+    margin-top: 16%;
+    margin-left: 67%;
+    font-size: 28px;
+    pointer-events: none;
+  }
+
+  .signinHeader {
+    position: absolute;
+    margin-top: 19%;
+    margin-left: 67%;
+    pointer-events: none;
+  }
+
+  .form-content {
+    background: $white;
+    float: right;
+    width: 25vw;
+    margin-top: 22%;
+    margin-right: 7%;
+    text-align: left;
+  }
+
+  .emailId {
+    color: var(--textcolortext-600, #4F5B67);
+    margin-left: 1%;
+  }
+
+  .password {
+    color: var(--textcolortext-600, #4F5B67);
+    margin-left: 1%;
+  }
+}
+
+@media (min-width: 500px) {
+  .signin-container {
+    .signinHeader-mobile {
+      font-size: 0px;
+    }
+  }
+}
+
+@media (max-width: 415px) {
+  .header-content {
+    .signin-image {
+      height: 0px;
+    }
+    .welcome-message {
+      font-size: 0px;
+    }
+    .kanini-message {
+      font-size: 0px;
+    }
+    .signin-quote {
+      height: 0px;
+    }
+
+    .sigin-image-mobile1 {
+      position: absolute;
+      bottom: -1%;
+      left: 0%;
+      width: 44%;
+      height: 27%;
+    }
+    .sigin-image-mobile2 {
+      position: absolute;
+      top: 0%;
+      right: -1%;
+      width: 52%;
+      height: 32%;
+    }
+  }
+
+  .signin-container {
+    .img-welcome {
+      top: 16%;
+      left: -62%;
+      width: 198px;
+      height: 78px;
+    }
+    .form-content {
+      width: -22vw;
+      margin-top: 90%;
+      margin-right: 66%;
+    }
+
+    .input-group > .form-control {
+      position: absolute;
+      width: 358px;
+      height: 55px;
+    }
+  }
+
+  .button-signin {
+    width: 370px;
+    height: 66px;
+    bottom: 15%;
+    left: 7%;
+    border-radius: 0px;
+    background: #0078FF;
+    position: absolute;
+  }
+
+  .input-group {
+    width: 454px;
+    height: 63px;
+    bottom: -31%;
+    left: 0%;
+  }
+
+  .signinLabel {
+    position: absolute;
+    top: 25%;
+    left: -58%;
+    font-size: 25px;
+    pointer-events: none;
+  }
+
+  .signinHeader {
+    font-size: 0px;
+  }
+
+  .signinHeader-mobile {
+    position: absolute;
+    top: 37%;
+    left: 10%;
+    pointer-events: none;
+  }
+}

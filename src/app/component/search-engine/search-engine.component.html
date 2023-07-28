@@ -1,0 +1,39 @@
+<app-header></app-header>
+<div class="search-engine">
+        <img class="background-image" src="assets/Background-Building.png" alt="Building">
+        <img class="background-image-mobile" src="assets/Building-Mobile.png" alt="Building">
+    <div class="label-align-center">
+        <label class="page-heading-content">{{headingContent}}</label>
+        <label class="page-subheading-content"><br>{{subHeadingContent}}</label>
+    </div>
+        <div class="search-box">
+            <input type="text" name="search" class="search-control" placeholder="Search for stocks" list="list-stock" tabindex="1" autofocus (click)="onSearchClick($event)">
+            <img class="search-image" src="assets/searchSymbol.png" alt="search-icon"/>
+            <datalist id="list-stock" class="list-stock">
+                <option id="1" class="list-1">Oil & Natural Gas Corporation Limited</option>
+                <option id="2">Oil India Limited</option>
+                <option id="3">Oil Country Tubular Limited</option>
+                <option id="4">Dalmia Bharat Limited</option>
+            </datalist>
+    </div>
+        <div class="label-align-down">
+            <div class="label-align-down content">
+                <label class="page-content-trending">{{trending}}</label>
+            </div>
+            <div class="label-align-down logo">
+                <img src="assets/ITC-Logo.png" alt="ITC"/>
+            </div>
+            <div class="label-align-down yes-bank-image">
+                <img src="assets/YES_Bank-Logo.png" alt="YES_BANK"/>
+            </div>
+            <div class="label-align-down reliance-image">
+                <img src="assets/Reliance-Logo.png" alt="Reliance"/>
+            </div>
+            <div class="label-align-down hdfc-image">
+                <img src="assets/HDFC-Logo.png" alt="HDFC"/>
+            </div>
+            <div class="label-align-down irctc-image">
+                <img src="assets/IRCTC-Logo.png" alt="IRCTC"/>
+            </div>
+    </div>
+</div>
