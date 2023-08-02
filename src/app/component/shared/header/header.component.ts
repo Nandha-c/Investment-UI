@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
 import { headerConstant} from 'src/app/app-constants';
+import { AuthService } from 'src/app/service/auth.service';
 
 @Component({
   selector: 'app-header',
@@ -8,12 +8,12 @@ import { headerConstant} from 'src/app/app-constants';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent {
-  logout: string ="";
-  constructor(private router : Router) {}
+
+  constructor(private auth : AuthService) {}
   ngOnInit(): void {
-    this.logout = headerConstant.logout;
+    
   }
-  onLogout() {
-    this.router.navigate(['/signin']);
+  onLogout(){
+    this.auth.logout();
   }
 }

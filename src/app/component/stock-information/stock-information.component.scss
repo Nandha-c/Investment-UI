@@ -89,12 +89,15 @@
         margin-top: -51px;
         margin-left: 1173px;
         .position-arrow{
-            color: #FFF;
-            font-family: Inter;
-            font-size: 26px;
-            font-style: normal;
-            font-weight: 500;
-            line-height: 28px; /* 107.692% */
+          color: #FFF;
+          font-family: Inter;
+          font-size: 23px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 6px;
+          left: 35.3%;
+          top: -36%;
+          position: relative;
         }
     }
     .position-percentage{
@@ -341,15 +344,281 @@
 }  
 }
 
-@media (max-width: 400px) {
-  .page-container {
-    background: #FFFFFF;
-  }
 
+@media (max-width: 500px) {
+  .page-container {
+    background: #F6F8FC;
+    width: 465px;
+  }
   .back {
-    margin-top: 10px;
-    margin-left: 115px;
+    position: absolute;
+    top: -5px;
     background: none;
     border:none;
-}
+  }
+  .heading-content{
+    .company-name{
+      margin-top: 10px;
+      margin-left: 13px;
+      color: #2F2F2F;
+      font-family: Inter;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 41px;
+    }
+    .nse{
+        color: #2F2F2F;
+        margin-left: 10px;
+        font-size: 12px;
+    }
+    .nse-value{
+      border-radius: 4px;
+      margin-left: 0px;
+      background: #B9DD4E;
+      color: #FEFEFE;
+      text-align: center;
+      font-family: Inter;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+    }
+    .bse{
+      color: #2F2F2F;
+      margin-left: 100px;
+      margin-top: -26px;
+      font-size: 12px;
+      position: absolute;
+    }
+    .bse-value{
+      position: absolute;
+      border-radius: 4px;
+      margin-left: 135px;
+      margin-top: -24px;
+      background: #B9DD4E;
+      color: #FEFEFE;
+      text-align: center;
+      font-family: Inter;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+    }
+    .sector{
+      color: #2F2F2F;
+      margin-left: 229px;
+      margin-top: -26px;
+      font-size: 12px;
+      position: absolute;
+    }
+
+    .sector-value{
+      position: absolute;
+      border-radius: 4px;
+      margin-left: 288px;
+      margin-top: -23px;
+      color: #96B82F;
+      text-align: center;
+      font-family: Inter;
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+    }
+    .sensex-position-arrow{
+      border-radius: 4px;
+      background: #B9DD4E;
+      height: 18px;
+      width: 66px;
+      margin-top: 5px;
+      margin-left: 39px;
+        .position-arrow{
+            color: #FFF;
+            font-family: Inter;
+           font-size: 12px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 28px;
+        }
+    }
+    .position-percentage{
+        position: absolute;
+        margin-top: -50px;
+        margin-left: 1279px;
+        color: var(--dark-grey, #161616);
+        font-family: Inter;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 30px;
+    }
+    .position-updated-day{
+        position: absolute;
+        margin-top: -27px;
+        margin-left: 1279px;
+        color: #2630A8;
+        font-family: Inter;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 30px; 
+    }
+  }
+.card-in{
+    border-radius: 10px;
+    margin-top: 20px;
+    background: #EFF4FF;
+    width: 176px;
+    height: 193px;
+    margin-left: 10px;
+  }
+  .card-layout{
+    margin-top: 17px;
+    width: 782px;
+    height: 226px;
+    margin-left: 27px;
+  }
+  .card-price{
+    border-radius: 10px;
+    background: #FFF;
+    box-shadow: 0px 4px 13px 0px rgba(0, 0, 0, 0.08);
+    width: 304px;
+    height: 107px;
+    margin-top: 36px;
+    margin-right: -93PX;
+    margin-left: 124px;
+    .oval-color{
+        margin-top: 20px;
+        height: 72px;
+        width: 74px;
+        margin-left: 18px;
+    }
+    .graph-image{
+        margin-top: -54px;
+        height: 31px;
+        width: 33px;
+        margin-left: 39px;
+    }
+    .stock{
+        position: absolute;
+        margin-top: 28px;
+        margin-left: 130px;
+        color: #2F2F2F;
+        font-family: Inter;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 16px;
+    }
+    .price{
+        position: absolute;
+        margin-top: 62px;
+        margin-left: 149px;
+        color: #2F2F2F;
+        font-family: Inter;
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 16px;
+    }
+    .Rupee-logo{
+        width: 15.972px;
+        height: 23.958px;
+        margin-top: -9px;
+        margin-left: 128px;
+    }
+    .week-Rupee-logo{
+        width: 15.972px;
+        height: 23.958px;
+        margin-top: -32px;
+        margin-left: 128px;
+    }
+  }
+  .card-layout{
+    font-family: Inter;
+    font-style: normal;
+    .Ellipse{
+        width: 45px;
+        height: 46px;
+        margin-top: 10px;
+      }
+      .Ellipse-number{
+        color: #000;
+        font-size: 30px;
+        font-weight: 400;
+        line-height: normal;
+        margin-top: -41px;
+        margin-left: 15px;
+      }
+      .Position{
+        color: #2F2F2F;
+        font-size: 22px;
+        font-weight: 600;
+        line-height: 16px;
+        margin-top: 21px;
+      }
+      .description{
+        color: #2F2F2F;
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 29px;
+        margin-top: 3px;
+      }
+  }
+  .rectangle-1{
+    margin-left: -14px;
+    margin-top: -4px;
+    height: 424px;
+    width: 400px;
+  }
+  .card-list{
+    width: 381px;
+    height: 416px;
+    margin-top: 6px;
+    margin-left: 26px;
+  }
+  .card-rating{
+    margin-top: 42px;
+    width: 394px;
+    height: 183px;
+    margin-left: 24px;
+  }
+  .finstar{
+    color: #2F2F2F;
+    font-family: Inter;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 41px;
+  }
+  .info{
+    position: absolute;
+    margin-left: 105px;
+    margin-top: 16px;
+  }
+  .image-1{
+    margin-top: -20px;
+    width: 253px;
+    height: 70px;
+    margin-left: 249px;
+  }
+  .image-2{
+    margin-top: -261px;
+    width: 253px;
+    height: 70px;
+    margin-left: 249px;
+  }
+  .image-3{
+    margin-top: -148px;
+    width: 253px;
+    height: 70px;
+    margin-left: 510px;
+  }
+  .image-4{
+    margin-top: -358px;
+    width: 253px;
+    height: 70px;
+    margin-left: 510px;
+  }
 }

@@ -4,12 +4,13 @@ import { SearchEngineComponent } from './component/search-engine/search-engine.c
 import { SigninComponent } from './component/signin/signin.component';
 import { StockInformationComponent } from './component/stock-information/stock-information.component';
 import { DemoComponent } from './demo/demo.component';
+import { AuthGuard } from './service/auth-guard';
 
 const routes: Routes = [
   {path: '', redirectTo: 'signin' ,pathMatch: 'full'},
   {path: 'signin', component: SigninComponent},
-  {path: 'searchEngine', component:SearchEngineComponent},
-  {path: 'stockInformation', component:StockInformationComponent},
+  {path: 'searchEngine', component:SearchEngineComponent,canActivate: [AuthGuard]},
+  {path: 'stockInformation', component:StockInformationComponent, canActivate: [AuthGuard]},
   {path: 'demo',component:DemoComponent}
 ];
 

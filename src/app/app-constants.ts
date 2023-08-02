@@ -20,3 +20,9 @@ export const searchPageConstant={
   subHeadingContent : "The Modern Stock Screener that helps you pick better stocks",
   trending : "What’s Trending"
 }
+
+export const URLConstants={
+  signinUrl:"Login/Authenticate",
+  searchEngineUrl:"/searchEngine",
+  stockInformationUrl:"/stockInformation"
+}

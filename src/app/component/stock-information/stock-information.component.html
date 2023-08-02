@@ -1,25 +1,25 @@
 <app-header></app-header>
-<div class="page-container">
+<div class="page-container" *ngFor="let item of stockData">
     <div class="page-content">
         <button class="back" (click)="onBack()" alt="back-button"> < Back</button>
         <div class="heading-content">
-            <label class="company-name">Oil & Natural Gas Corporation Ltd</label>
+            <label class="company-name">{{item.companyName}}</label>
             <div class="sensex-content-NSE">
                 <label class="nse">NSE :</label>
-                <label class="nse-value">ONGC</label>
+                <label class="nse-value">{{item.nseListedName}}</label>
             </div>
             <div class="sensex-content-BSE">
                 <label class="bse">BSE :</label>
-                <label class="bse-value">500312</label>
+                <label class="bse-value">{{item.bseListedName}}</label>
             </div>
             <div class="sensex-content-sector">
                 <label class="sector">SECTOR :</label>
-                <label class="sector-value">Oil Exploration</label>
+                <label class="sector-value">{{item.sector}}</label>
             </div>
             <div class="sensex-position">
                 <div class="sensex-position-arrow">
                     <img class="arrow-img" src="assets/Arrow.png">
-                    <label class="position-arrow">142.5</label>
+                    <label class="position-arrow">142.35</label>
                 </div>
                 <div class="sensex-position-percentage">
                     <label class="position-percentage">+1.65(1.17%)</label>
@@ -34,26 +34,26 @@
                 <img class="graph-image" src="assets/graph-high.png">
                 <label class="stock">Today's High</label>
                 <img class="Rupee-logo" src="assets/Rupee-logo.png">
-                <label class="price">144.65</label>  
+                <label class="price">{{item.todaysHigh}}</label>  
             </div>
             <div class="col card card-price" >
                 <img class="oval-color" src="assets/oval-blue.png">
                 <img class="graph-image" src="assets/graph-low.png">
                 <label class="stock">Today's Low</label>
                 <img class="Rupee-logo" src="assets/Rupee-logo.png">
-                <label class="price">142.55</label>  
+                <label class="price">{{item.todaysLow}}</label>  
             </div>
             <div class="col card card-price">
                 <img class="oval-color" src="assets/graph-left.png">
                 <label class="stock">52 Week High</label>
                 <img class="week-Rupee-logo" src="assets/Rupee-logo.png">
-                <label class="price">194.95</label>  
+                <label class="price">{{item.high52W}}</label>  
             </div>
             <div class="col card card-price">
                 <img class="oval-color" src="assets/graph-right.png">
                 <label class="stock">52 Week Low</label>
                 <img class="week-Rupee-logo" src="assets/Rupee-logo.png">
-                <label class="price">199.85</label> 
+                <label class="price">{{item.low52W}}</label> 
             </div>
         </div>
 
@@ -62,25 +62,25 @@
                 <img class="Ellipse" src="assets/Ellipse.png">
                 <label class="Ellipse-number">8</label>
                 <label class="Position">Strengths</label>
-                <label class="description">Strong Annual EPS Growth</label>
+                <label class="description">{{item.strength}}</label>
             </div>
             <div class="col card card-in" >
                 <img class="Ellipse" src="assets/Ellipse.png">
                 <label class="Ellipse-number">9</label>
                 <label class="Position">Weaknesses</label>
-                <label class="description">Red Flag: High Interests Payments Compared to Earnings</label>
+                <label class="description">{{item.weakness}}</label>
             </div>
             <div class="col card card-in">
                 <img class="Ellipse" src="assets/Ellipse.png">
                 <label class="Ellipse-number">3</label>
                 <label class="Position">Opportunities</label>
-                <label class="description">Brokers Upgraded Recommendation or target price i...</label>
+                <label class="description">{{item.opportunities}}</label>
             </div>
             <div class="col card card-in">
                 <img class="Ellipse" src="assets/Ellipse.png">
                 <label class="Ellipse-number">0</label>
                 <label class="Position">Threats</label>
-                <label class="description">No Threat for this stock</label>
+                <label class="description">{{item.threats}}</label>
             </div>
         </div>
 

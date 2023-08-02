@@ -23,17 +23,15 @@ export class SearchEngineComponent {
   onSearchClick(event: Event) {
     const inputElement = event.target as HTMLInputElement;
     if (inputElement.list) {
-      // Loop through the datalist options and find the selected one
       const options = inputElement.list.options;
       for (let i = 0; i < options.length; i++) {
         const option = options[i] as HTMLOptionElement;
         if (option.value === inputElement.value) {
-          this.selectedOptionId = +option.id; // Convert the ID to a number (if needed)
+          this.selectedOptionId = +option.id; 
           break;
         }
       }
     } else {
-      // Handle the case when the datalist is not present
       this.selectedOptionId = undefined;
       console.warn("Datalist is not associated with the input element.");
     }
@@ -42,12 +40,10 @@ export class SearchEngineComponent {
         this.router.navigate(['/stockInformation']);
         break;
       case 2:
-        this.router.navigate(['/']);
+        this.router.navigate(['/searchEngine']);
         break;
       default:
         break;
-
-
     }
   }
 }

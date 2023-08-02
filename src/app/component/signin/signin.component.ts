@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { signinConstant } from 'src/app/app-constants';
+import { URLConstants, signinConstant } from 'src/app/app-constants';
+import { AuthService } from 'src/app/service/auth.service';
 
 @Component({
   selector: 'app-signin',
@@ -10,14 +11,15 @@ import { signinConstant } from 'src/app/app-constants';
 })
 export class SigninComponent {
   signinForm!: FormGroup;
-  constructor(private router : Router, private formBuilder: FormBuilder) {
+  loginFailed: boolean = false;
+
+  constructor(private router : Router, private formBuilder: FormBuilder , private auth:AuthService) {
     this.signinForm = this.formBuilder.group({
       emailIdText: ['', [Validators.required, Validators.email]],
       passwordText: ['', [Validators.required]]
     });
   }
 
-  /* variables declaration */
   emailId: string ="";
   password: string ="";
   signinLabel: string ="";
@@ -27,6 +29,7 @@ export class SigninComponent {
   searchMessage: string ="";
   kaniniMessage: string ="";
   inputText: string = '';
+  maskedPassword: string = '';
 
 
   ngOnInit(): void {
@@ -38,23 +41,41 @@ export class SigninComponent {
     this.message = signinConstant.message;
     this.searchMessage = signinConstant.searchMessage;
     this.kaniniMessage = signinConstant.kaniniMessage;
-    
+
+    const token = this.auth.getJwtToken();
+
+    if (token !== null) {
+      if (token == "" || token == undefined || token == null) {
+        localStorage.removeItem('token');
+      }
+      else {
+        this.router.navigate([URLConstants.searchEngineUrl]);
+      }
+    }
+  }
+  maskPassword() {
+    this.maskedPassword = this.inputText.replace(/./g, '*');
   }
 
   onSignIn(): void {
-    if (this.signinForm.valid) {
-      const email = this.signinForm.get('emailIdText')?.value;
-      const password = this.signinForm.get('passwordText')?.value;
 
+    const email= this.signinForm.value.emailIdText;
+    const password= this.signinForm.value.passwordText;
 
-      const validEmail = 'example@kanini.com';
-      const validPassword = 'Password@123';
-
-      if (email === validEmail && password === validPassword) {
-        this.router.navigate(['/searchEngine']);
-      } else {
-        alert('Invalid email or password. Please try again.');
+    if(email && password)
+    {
+      this.auth.signin({mailId: email , Password: password}).subscribe(success =>{
+        if(success)
+        {
+          this.router.navigate([URLConstants.searchEngineUrl]);
+        }
+        else{
+          this.loginFailed =  true;
+        }
+      },error => {
+        this.loginFailed = true;
       }
+      );
     }
   }
 }

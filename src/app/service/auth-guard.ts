@@ -1,19 +1,22 @@
-// import { Injectable } from '@angular/core';
-// import { CanActivate, Router } from '@angular/router';
-// import { AuthService } from 'ngx-auth';
+import { Injectable } from '@angular/core';
+import { CanActivate, Router } from '@angular/router';
+import { AuthService } from 'ngx-auth';
 
-// @Injectable({
-//   providedIn: 'root'
-// })
-// export class AuthGuard implements CanActivate {
-//   constructor(private authService: AuthService, private router: Router) {}
+@Injectable({
+  providedIn: 'root'
+})
+export class AuthGuard {
+  constructor(private router: Router) {}
 
-//   canActivate(): boolean {
-//     if (this.authService.getAccessToken) {
-//       // User is authenticated (logged in), prevent access to login page
-//       this.router.navigate(['/dashboard']); // Change '/dashboard' to your desired default page
-//       return false;
-//     }
-//     return true;
-//   }
-// }
+  canActivate(): boolean {
+    const token =localStorage.getItem('token');
+    if (token == null) {
+      this.router.navigate(['/searchEngine']);
+      return false;
+    }
+    else{
+        return true;
+    }
+    
+  }
+}
